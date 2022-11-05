@@ -13,14 +13,9 @@ app.get("/", async (req, res) => {
   res.json({ message: "Please visit /countries to view all the countries" });
 });
 
-app.post('/post', (req,res) => {
-  
-  let result = 0
-  
+app.post('/posts', (req,res) => {
   res.status(200).json({
       "slackUsername":"JerryG",
-      "result": result,
-      "operation_type" : req.body
       // "operation_type": req.body.operation_type
   })
 
