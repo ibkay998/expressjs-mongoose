@@ -18,7 +18,7 @@ app.post('/posts', (req,res) => {
   res.status(200).json({
       "slackUsername":"JerryG",
       "result": result,
-      "operation_type" : req.body
+      
       // "operation_type": req.body.operation_type
   })
 
