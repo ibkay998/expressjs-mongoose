@@ -13,6 +13,21 @@ app.get("/", async (req, res) => {
   res.json({ message: "Please visit /countries to view all the countries" });
 });
 
+app.post('/post', (req,res) => {
+  try{
+  let result = 0
+  console.log(req.body)
+  res.status(200).json({
+      "slackUsername":"JerryG",
+      "result": result,
+      "operation_type" : req.body
+      // "operation_type": req.body.operation_type
+  })
+}catch(error){
+  res.status(500).json(error)
+}
+})
+
 app.use("/countries", countryRoutes);
 
 app.listen(port, () => {
